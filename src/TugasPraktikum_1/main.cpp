@@ -23,9 +23,21 @@ void Mahasiswa::setName(string name) {
     m_name = name;
 }
 
+class Halo : public Mahasiswa {
+public:
+    Halo();
+    void setAge(int);
+};
+
+void Halo::setAge(int age) {
+    m_age = age;
+}
+
 int main() {
     Mahasiswa miko("Michael Raditya Krisnadhi", 18);
     cout << miko.getName() << '\n';
     miko.setName("Miko");
     cout << miko.getName() << '\n';
+
+    Halo miko2;
 }
